@@ -1,0 +1,16 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: luz-bairro
+  labels:
+    app: luz-bairro
+spec:
+  to:
+    kind: Service
+    name: luz-bairro
+    weight: 100
+  port:
+    targetPort: http
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
