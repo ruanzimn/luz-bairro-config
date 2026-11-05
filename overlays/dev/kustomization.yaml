@@ -2,7 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 # TODO(aluno): troque cicd-dev pelo seu projeto de desenvolvimento ($DEV_NS) aqui e em "newName".
-namespace: ruan-dev
+namespace: cicd-dev-ruanrodrigues
 
 resources:
   - ../../base
@@ -11,7 +11,7 @@ resources:
 # Nao altere o formato delas: o pipeline as localiza por padrao de texto.
 images:
   - name: luz-bairro
-    newName: image-registry.openshift-image-registry.svc:5000/ruan-dev/luz-bairro
+    newName: image-registry.openshift-image-registry.svc:5000/cicd-dev-ruanrodrigues/luz-bairro
     digest: sha256:0000000000000000000000000000000000000000000000000000000000000000
 
 configMapGenerator:
