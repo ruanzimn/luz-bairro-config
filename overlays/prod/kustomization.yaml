@@ -14,7 +14,7 @@ resources:
 images:
   - name: luz-bairro
     newName: image-registry.openshift-image-registry.svc:5000/cicd-dev-ruanrodrigues/luz-bairro
-    digest: sha256:0000000000000000000000000000000000000000000000000000000000000000
+    digest: sha256:5b090afc502ee138f823677b713aff2e26f95b9dcf10999d69d501944b9da291
 
 configMapGenerator:
   - name: luz-bairro-config
@@ -22,7 +22,7 @@ configMapGenerator:
     literals:
       - APP_MESSAGE=Portal Luz do Bairro - PRODUCAO
       - APP_ENV=prod
-      - APP_VERSION=0000000
+      - APP_VERSION=a692ed1
 
 patches:
   - target:
