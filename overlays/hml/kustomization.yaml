@@ -3,7 +3,7 @@ kind: Kustomization
 
 # Ambiente de homologacao: usado apenas no Incidente D do Exercicio 9.
 # TODO(aluno, Incidente D): troque cicd-hml pelo seu projeto de homologacao ($HML_NS).
-namespace: cicd-hml
+namespace: cicd-hml-ruanrodrigues
 
 resources:
   - ../../base
@@ -13,8 +13,8 @@ resources:
 # O digest e a versao sao copiados de dev por: bash scripts/promover.sh hml
 images:
   - name: luz-bairro
-    newName: image-registry.openshift-image-registry.svc:5000/cicd-dev/luz-bairro
-    digest: sha256:0000000000000000000000000000000000000000000000000000000000000000
+    newName: image-registry.openshift-image-registry.svc:5000/cicd-dev-ruanrodrigues/luz-bairro
+    digest: sha256:2153fcbb01a49312e5478389ea9d3fbe7046d2f24eeb939e6f12978dfe807c23
 
 configMapGenerator:
   - name: luz-bairro-config
@@ -22,4 +22,4 @@ configMapGenerator:
     literals:
       - APP_MESSAGE=Portal Luz do Bairro - HOMOLOGACAO
       - APP_ENV=hml
-      - APP_VERSION=0000000
+      - APP_VERSION=abc8aa9
